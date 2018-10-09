@@ -1,0 +1,223 @@
+body,html,div,ul,li,a,img,ol,em,h2,h3,h4,p,table,tr,td{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+    text-decoration: none;
+    color:black;
+}
+body{
+    background:#f3f3f3;
+}
+.header{
+    height:30px;
+    background:#f5f5f5;
+}
+.header_top,.nav,.main{
+    width:944px;
+    margin:0 auto;
+}
+.header_top{
+    height:110px;
+}
+.header_top a{
+    font-size:11px;
+    color:#666666;
+}
+.header_top a:hover{
+    color:red;
+}
+.li_left{
+    float:left;
+}
+.li_left>li{
+    float:left;
+    padding-right:10px;
+}
+.li_right{
+    float:right;
+}
+.li_right>li{
+    float:left;
+    padding-right:10px;
+}
+.header_nav{
+    width:100%;
+    height:80px;
+    background:white;
+}
+.nav{
+    height:80px;
+    position: relative;
+}
+.nav>img{
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.the_nav{
+    float:right;
+    padding-top:27px;
+}
+.the_nav>li{
+    float:left;
+    margin-right: 7px;
+}
+.nav .the_nav>li>a{
+    display:block;
+    padding:5px 10px;
+    font-size: 16px;
+}
+.nav .the_nav>li>a:hover{
+    background:#cccccc;
+}
+.content,.main{
+    height:490px;
+}
+.main{
+    background:white;
+    margin-top:20px;
+    padding:10px;
+    width:924px;
+}
+.content_nav{
+    height:40px;
+    width:100%;
+    border-bottom:1px dashed #f5f5f5;
+}
+.content_nav>a{
+    color:gray;
+    font-size: 15px;
+    line-height:40px;
+    margin-right:5px;
+}
+.content_nav span{
+    font-size: 12px;
+    float:right;
+    line-height:40px;
+    color:gray;
+    margin-right:10px;
+}
+.banner{
+    height:442px;
+    width:100%;
+}
+.banner .images{
+    height:422px;
+    width:360px;
+    padding:10px 0px;
+    float: left;
+}
+.images .bigimg{
+    height:360px;
+    width:360px;
+    background:#f5f5f5;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.smallimg{
+    height:50px;
+    width:360px;
+}
+.smallimg>li{
+    float: left;
+    width:64px;
+    height:50px;
+    margin-right:5px;
+    text-align: center;
+}
+.smallimg img{
+    height:45px;
+    width:45px;
+}
+.massage{
+    height:100%;
+    width:540px;
+    float:right;
+}
+.massage .name{
+    height:46px;
+    line-height:45px;
+} 
+.massage .serve{
+    height:62px;
+}
+.serve>li{
+    float: left;
+    line-height:62px;
+    margin-right:20px;
+}
+.serve a{
+    background:#ffa100;
+    padding:5px;
+    border-radius: 3px;
+    color:white;
+}
+.things{
+    list-style-type:disc;
+    height:80px;
+    width:540px;
+    border:1px dashed gray;
+}
+.things>li{
+    height:26px;
+    color:gray;
+    list-style-type:disc;
+    font-size: 14px;
+    line-height:26px;
+    margin-left: 20px;
+}
+.infobar{
+    height:24px;
+    margin-top:15px;
+}
+.infobar span{
+    float: right;
+    color:red;
+    font-weight: bold;
+}
+.infobar span>e{
+    color:black;
+}
+.buysubmit{
+    height:66px;
+    background:#e61414;
+    margin-top:15px;
+    position: relative;
+    margin-bottom:30px;
+}
+.buysubmit span{
+    color:white;
+    font-size:30px;
+    line-height:66px;
+    margin-right:25px;
+}
+.buysubmit del{
+    color:white;
+}
+.buysubmit .submit{
+    width:128px;
+    height:38px;
+    color:red;
+    background:#fee97d;
+    border-radius:8px;
+    float:right;
+    margin-top:15px;
+}
+.buysubmit img{
+    position: absolute;
+    right:-32px;
+}
+.massage .foot>span{
+    font-size: 15px;
+    line-height:15px;
+    display: inline-block;
+}
+.massage .foot>img{
+    float:right;
+}
+.footer{
+    width:944px;
+    height:739px;
+    margin:0 auto;
+    background:url(../images/images/美白补水淡斑面膜20片_20.png) no-repeat;
+}

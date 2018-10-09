@@ -1,0 +1,26 @@
+.login-form{
+	width:500px;
+    min-height: 400px;
+    margin:30px auto;
+    text-align: center;
+    line-height:70px;
+}
+input{
+	height:37px;
+	width:300px;
+}
+.save{
+	height:37px;
+	width:300px;
+	display:inline-block;
+	background:#FFC0CB;
+	line-height: 37px;
+	visibility: hidden;
+}
+.but{
+	height:40px;
+	width:130px;
+	background:orangered;
+	color:white;
+	text-align: center;
+}

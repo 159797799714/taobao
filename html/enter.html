@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/enter.css" type="text/css">
+</head>
+<body> 
+    <div class="header">
+        <div class="logo"></div>
+    </div>
+    <div class="content">
+        <div class="banner">
+            <div class="enter">
+                <div class="top">
+                    <div class="title">
+                        密码登录
+                    </div>
+                </div>
+                <div class="massage">
+                	<form class="login-form" onsubmit="return false">
+                        <div class="name">
+		                     <img src="../images/enter/name.png" alt="">
+		                     <input name="username" type="text" required="required" placeholder="会员名/邮箱/手机号">
+                        </div>
+                        <div class="pass">
+	                         <img src="../images/enter/pass.png" alt="">
+	                         <input name="password" required="required" type="password">
+                        </div>
+                        <button class="but" type="submit" name="login-btn">登录</button>
+                    </form>
+</div>
+                <div class="ways">
+                        <span><img src="../images/enter/icon1.png"><a>微博登录</a></span>
+                        <span><img src="../images/enter/icon2.png"><a>支付宝登录</a></span>
+                    <ul>
+                        <li><a href="">忘记密码</a></li>
+                        <li><a href="">忘记会员名</a></li>
+                        <li><a href="register.html">免费注册</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="foot">
+        <div class="footer">
+            <ul>
+                <Li><a href="">阿里巴巴集团 | </a></Li>
+                <Li><a href="">阿里巴巴国际站 |</a></Li>
+                <Li><a href="">阿里巴巴中国站 |</a></Li>
+                <Li><a href="">全球速卖通 |</a></Li>
+                <Li><a href="">淘宝网 |</a></Li>
+                <Li><a href="">天猫 |</a></Li>
+                <Li><a href="">聚划算 |</a></Li>
+                <Li><a href="">一淘 |</a></Li>
+                <Li><a href="">阿里妈妈 |</a></Li>
+                <Li><a href="">飞猪 |</a></Li>
+                <Li><a href="">虾米 |</a></Li>
+                <Li><a href="">阿里云计算 |</a></Li>
+                <Li><a href="">云OS |</a></Li>
+                <Li><a href=""> 万网 |</a></Li>
+                <Li><a href="">支付宝 |</a></Li>
+                <Li><a href="">来往</a></Li>
+            </ul>
+            <p class="last">
+                <a href="">关于淘宝</a>
+                <a href="">合作伙伴</a>
+                <a href="">营销中心</a>
+                <a href="">廉政举报</a>
+                <a href="">联系客服</a>
+                <a href="">开放平台</a>
+                <a href="">诚征英才</a>
+                <a href="">联系我们</a>
+                <a href="">网站地图</a>
+                <a href="">法律声明及隐私权政策</a>
+                <span>© 2018 Taobao.com 版权所有</span>
+            </p>
+            <h4>网络文化经营许可证：浙网文[2016]0132-032号|增值电信业务经营许可证：浙B2-20080224-1|信息网络传播视听节目许可证：1109364号</h4>
+        </div>
+    </div>
+    <script src="../js/common/ajax.js"></script>
+    <script src="../js/enter.js"></script>
+    <script>
+        login.init('.login-form');
+    </script>
+</body>
+</html>

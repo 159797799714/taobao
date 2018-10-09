@@ -1,0 +1,143 @@
+html,body,div,ul,li,input,p,span,a,img,h4{
+   padding:0px;
+   margin:0px;
+   list-style-type:none;
+   text-decoration: none;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+.header,.logo{
+    height:90px;
+}
+.logo,.banner,.footer{
+    width:1200px;
+    margin:0px auto;
+}
+.logo{
+    background:url(../images/enter/logo.png) no-repeat 0px 24px;
+}
+.content,.banner{
+    height:600px;
+    background:#868bf1;
+}
+.banner{
+    background:url(../images/enter/banner.png) no-repeat 28px 80px;
+}
+.enter{
+    height:354px;
+    width:354px;
+    background:#f3f4fe;
+    float:right;
+    margin-top:120px;
+    right:60px;
+    padding-left:28px;
+}
+.top{
+    height:80px;
+    width:100%;
+    background:url(../images/enter/saoma.png) no-repeat 150px 6px;
+}
+.title{
+    font-weight:bold;
+    height:80px;
+    width:122px;
+    line-height:80px;
+}
+.massage{
+    height:190px;
+    width:300px;
+}
+.massage img{
+    display: inline-block;
+    height:42px;
+    width:42px;
+}
+.name,.pass{
+    height:42px;
+    width:302px;
+    margin-bottom:19px;
+    border:1px solid #9fc1fd;
+}
+input{
+    display: inline-block;
+    height:38px;
+    width:256px;
+    float:right;
+}
+.but{
+    height:44px;
+    width:302px;
+    background:#ff4400;
+    color:white;
+}
+.massage>button:hover{
+    background:red;
+}
+.ways{
+    height:16px;
+    width:300px;
+}
+.ways img{
+    display:inline-block;
+    float: left;
+}
+.ways>span{
+    display: inline-block;
+    height:16px;
+    width:90px;
+}
+.ways>span>a{
+    font-size: 11px;
+    color:gray;
+    line-height:16px;
+    display: inline-block;
+    float:left;
+}
+.ways>ul{
+    float:right;
+    margin-top:27px;
+}
+.ways>ul>li{
+    float: left;
+    margin-right:11px;
+}
+.ways li>a{
+    color:gray;
+    font-size: 11px;
+}
+.foot,.footer{
+    height:240px;
+}
+/* .footer{
+    background:white;
+} */
+.footer>ul{
+    height:46px;
+    padding-top:60px;
+}
+.footer li{
+    border-top:1px solid #f5f5f5;
+    float:left;
+    margin:0px 4px;
+}
+.footer a{
+    color:gray;
+    font-size: 11px;
+    line-height:46px;
+}
+.last{
+    float: left;
+}
+.last>span{
+    font-size: 11px;
+    color:gray;
+    margin-left: 37px;
+}
+.footer>h4{
+    float: left;
+    font-size: 11px;
+    color:gray;
+    font-weight: 400;
+}

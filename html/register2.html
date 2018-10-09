@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/register.css" type="text/css">
+    <link rel="stylesheet" href="../css/register2.css" type="text/css">
+</head>
+<body>
+    <div class="header">
+        <div class="header_head">
+            <div class="header_nav">
+                <p>
+                    <a href="enter.html" style="color:red ">亲，请登录</a>
+                    <a href="register.html">免费注册</a>
+                    <a href="">手机逛淘宝</a>
+                </p>
+                <ul class="list">
+                    <li><a href="index.html" style="color:red">淘宝网首页</a></li>
+                    <li><a href="">我的淘宝</a></li>
+                    <li><a href="">购物车</a></li>
+                    <li><a href="">收藏夹</a></li>
+                    <li><a href="">商品分类</a></li>
+                    <li><a href="">卖家中心</a></li>
+                    <li><a href="">联系客服</a></li>
+                    <li><a href="">网站导航</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_logo"></div>
+    </div>
+    <div class="main">
+        <div class="content">
+            <ul class="step">
+                <li style="border-bottom: 2px solid red"><span style="background:red;">1</span> 设置账户名</li>
+                <li style="border-bottom: 2px solid red"><span style="background:red;">2</span> 填写账户信息</li>
+                <li><span>3</span> 设置支付方式</li>
+                <li><span>√</span> 注册成功</li>
+            </ul>
+            <div class="step_main">
+            	<form class="login-form" onsubmit="return false">
+                   &nbsp; &nbsp;会员名：<input name="username" type="text" required="required" placeholder="用户名" /></br>
+                                     登录密码：<input name="password" type="password" required="required" placeholder="密码"  class="pass_one"/></br>
+                                     确认密码：<input type="password"required="required" placeholder="请再次输入密码"  class="pass_two"/></br>
+                   <span class="save">两次密码输入不一致，请重新输入</span></br>
+                <button class="but" type="submit" name="login-btn">同意协议并注册</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+            <div class="footer">
+                <ul>
+                    <Li><a href="">阿里巴巴集团 | </a></Li>
+                    <Li><a href="">阿里巴巴国际站 |</a></Li>
+                    <Li><a href="">阿里巴巴中国站 |</a></Li>
+                    <Li><a href="">全球速卖通 |</a></Li>
+                    <Li><a href="">淘宝网 |</a></Li>
+                    <Li><a href="">天猫 |</a></Li>
+                    <Li><a href="">聚划算 |</a></Li>
+                    <Li><a href="">一淘 |</a></Li>
+                    <Li><a href="">阿里妈妈 |</a></Li>
+                    <Li><a href="">飞猪 |</a></Li>
+                    <Li><a href="">虾米 |</a></Li>
+                    <Li><a href="">阿里云计算 |</a></Li>
+                    <Li><a href="">云OS |</a></Li>
+                    <Li><a href=""> 万网 |</a></Li>
+                    <Li><a href="">支付宝 |</a></Li>
+                    <Li><a href="">来往</a></Li>
+                </ul>
+                <p class="last">
+                    <a href="">关于淘宝</a>
+                    <a href="">合作伙伴</a>
+                    <a href="">营销中心</a>
+                    <a href="">廉政举报</a>
+                    <a href="">联系客服</a>
+                    <a href="">开放平台</a>
+                    <a href="">诚征英才</a>
+                    <a href="">联系我们</a>
+                    <a href="">网站地图</a>
+                    <a href="">法律声明及隐私权政策</a>
+                    <span>© 2018 Taobao.com 版权所有</span>
+                </p>
+                <h4>网络文化经营许可证：浙网文[2016]0132-032号|增值电信业务经营许可证：浙B2-20080224-1|信息网络传播视听节目许可证：1109364号</h4>
+            </div>
+     </div>
+        <script src="../js/common/ajax.js"></script>
+        <script type="text/javascript" src="../js/register2.js"></script>
+        <script>
+          register.init('.login-form');
+        </script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ body{
     height:30px;
     background:#f5f5f5;
 }
-.header_top,.nav,.main{
+.header_top,.nav,.main,.footer_down,.footer_href{
     width:944px;
     margin:0 auto;
 }
@@ -215,9 +215,86 @@ body{
 .massage .foot>img{
     float:right;
 }
+.store{
+    height:808px;
+    width:202px;
+    
+}
 .footer{
-    width:944px;
-    height:739px;
-    margin:0 auto;
-    background:url(../images/images/美白补水淡斑面膜20片_20.png) no-repeat;
+    height:390px;
+    width:100%;
+    background:#f5f5f5;
+    float: left;
+    margin-top:50px;
+}
+.footer_href{
+	
+    height:238px;
+    border-bottom: 1px solid white;
+
+}
+.footer_href h4{
+    line-height:40px;
+    font-size:12px;
+    color:gray;
+    margin-bottom: 12px;
+    border-bottom: 1px solid white;
+}
+
+.logo,.about,.buyer,.soler,.speak,.service,.phone{
+    height:190px;
+}
+.about,.buyer,.soler,.speak,.service,.phone{
+    width:120px;
+    float: left;
+}
+.about a,.buyer a,.soler a,.speak a,.service a,.phone a{
+    font-size: 11px;
+    color:gray;
+    line-height:23px;
+}
+.logo{
+    width:180px;
+    float:left;
+    font-size:22px;
+    color:gray;
+    line-height:40px;
+    font-weight: bold;
+}
+.phone{
+    width:150px;
+}
+.phone img{
+    margin-bottom: 14px;
+}
+.footer_down,.abli{
+    height:150px;
+}
+.abli{
+    width:180px;
+    float:left;
+}
+.parter{
+    float:left;
+    width:752px;
+    min-height:70px;
+}
+.parter>li{
+    display:block;
+    height:16px;
+    float: left;
+    padding:0px 9px;
+    border-right:1px solid gray;
+    line-height:11px;
+    margin-top:16px;
+}
+.parter a{
+    font-size:11px;
+    color:gray;
+}
+ .footer_down  span{
+     padding-left: 9px;
+    font-size:11px;
+    color:gray;
+    line-height: 26px;
 }

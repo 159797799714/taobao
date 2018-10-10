@@ -41,7 +41,7 @@ var register = (function(){
                         _this.loginSuccess(data);
                     }
                 }
-                sendAjax('http://localhost/myshop/php/register.php', params);
+                sendAjax('http://localhost//myshop/shopstore/php/register.php', params);
             }
             this.$usernameInp.onchange = function(){
                 var params = {
@@ -53,7 +53,7 @@ var register = (function(){
                         _this.checkName(data);
                     }
                 }
-                sendAjax('http://localhost/myshop/php/check_username.php', params);
+                sendAjax('http://localhost//myshop/shopstore/php/check_username.php', params);
             }
         },
         checkName: function(data) {

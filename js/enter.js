@@ -29,7 +29,7 @@ var login = (function(){
                        	_this.loginSuccess(data);
                     }
                 }
-                sendAjax("http://localhost/myshop/php/enter.php", params);
+                sendAjax("http://localhost//myshop/shopstore/php/enter.php", params);
             }
         },
         loginSuccess: function(data) {

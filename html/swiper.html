@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/css/swiper.css">
+    <style>
+          .mySwiper{
+            height:200px;
+            width:500px;
+          }
+          .swiper-wrapper img{
+            height:200px;
+            width:500px;
+          }
+          .small_li{
+            height:20px;
+            width:100px;
+          }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.js"></script>
+    <div class="swiper-container  mySwiper">
+          <div class="swiper-wrapper">
+                 <div class="swiper-slide" ><img src="../images/img1.png"  class="img1"></div>
+                 <div class="swiper-slide" ><img src="../images/img2.png" class="img2"></div>
+                 <div class="swiper-slide" ><img src="../images/img3.png" class="img3"></div>
+          </div>
+          <div class="swiper-pagination small_li"></div>
+          <!-- <div class="swiper-button-prev"></div> -->
+          <!-- 左箭头 -->
+          <!-- <div class="swiper-button-next"></div> -->
+          <!--右箭头-->
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+pagination: {
+    el: '.swiper-pagination',
+    clickable :true,
+  },
+})
+</script>
+</body>
+</html> 

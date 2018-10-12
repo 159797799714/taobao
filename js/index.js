@@ -1,5 +1,16 @@
 window.onload= function() {
         var box  = document.getElementById("all");  //   获得大盒子
+        var banner = document.querySelector('.banner');
+        var arr = ['#f5743b','#133094'];
+        var j = 0;
+        var timer2 =  setInterval(function(){
+                 banner.style.background = arr[j%2];
+                 if(j == 100){
+                       this.timer2 = null;
+                 } 
+                 j ++;
+        },2000)
+
         var $tr = document.querySelector('.brand_name_list');
         console.log($tr);
         var ul = box.children[0].children[0];  // 获取ul

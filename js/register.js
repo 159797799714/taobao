@@ -7,6 +7,8 @@ var swiper = (function () {
     var ipt_num = document.querySelector('.phone');
     var idea = document.querySelector('.idea');
     var idea2 = document.querySelector('.idea2');
+     var green = document.querySelector('.green');
+
     var maxL = slice_span.clientWidth - small.offsetWidth;
     var _x = 0;
     ipt_num.onblur = function () {
@@ -45,7 +47,9 @@ var swiper = (function () {
             else {
                 small.style.left = _x + 'px';
             }
+            green.style.width = small.style.left;
         }
+        
     }
     small.onmouseup = function () {
         var timer = null;
@@ -57,6 +61,7 @@ var swiper = (function () {
                 clearInterval(timer);
                 small.style.left = 0 + 'px';
             }
+            green.style.width = small.style.left;
         }, 10)
     }
 

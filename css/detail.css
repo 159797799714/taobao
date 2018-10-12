@@ -4,6 +4,10 @@ body,html,div,ul,li,a,img,ol,em,h2,h3,h4,p,table,tr,td{
     list-style-type: none;
     text-decoration: none;
     color:black;
+    
+}
+span{
+	display:inline-block;
 }
 body{
     background:#f3f3f3;
@@ -12,7 +16,7 @@ body{
     height:30px;
     background:#f5f5f5;
 }
-.header_top,.nav,.main,.footer_down,.footer_href{
+.header_top,.nav,.main,.footer_down,.footer_href,.detail{
     width:944px;
     margin:0 auto;
 }
@@ -76,8 +80,100 @@ body{
 .main{
     background:white;
     margin-top:20px;
-    padding:10px;
+    padding:10px 10px 0px 10px;
     width:924px;
+    position: relative;
+}
+.main .shop_main{
+    height:190px;
+    width:525px;
+    position: absolute;
+    top:300px;
+    left: 257px;
+    background: white;
+     z-index: 100;
+     padding: 20px;
+     border:7px solid #f5f5f5;
+     display: none;
+     border-radius: 5px;
+}
+.weight>span,.quantity>span{
+	font-size:12px;
+	width:60px;
+	line-height:28px;
+	display: inline-block;
+}
+.weight,.quantity,.verify{
+    width:340px;
+    float: left;
+}
+.weight{
+    height:28px;
+    margin-bottom: 30px;
+}
+.quantity{
+   height:28px;
+   margin-bottom: 20px;
+}
+.num{
+	border:1px solid gainsbo;
+}
+.num input{
+	width: 48px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    vertical-align: middle;
+    text-align: center;
+    border:1px solid #666;
+}
+.quantity button{
+	width:28px;
+	height:28px;
+	font-weight: bold;
+}
+.quantity .leavings,.num{
+	display: inline-block;
+}
+.verify{
+    height:37px;
+}
+.verify button{
+    width:102px;
+    height:37px;
+}
+.verify .sure{
+    color:white;
+    background: orangered;
+    margin-right:6px;
+    margin-left: 60px;
+}
+.verify .cancel{
+    color:#ccc;
+    background:#F5f5f5;
+    border:1px solid #ccc ;
+}
+.shop_img{
+    height:160px;
+    width:160px;
+    padding:20px  0px 0px 20px;
+    float: right;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.shop_img>span{
+	position:absolute;
+	top: -10px;
+    right:-10px;
+    width:21px;
+	text-align: center;
+	cursor:move;
+}
+.shop_img img{
+    height:160px;
+    width:160px;
+    border:1px solid gray;
 }
 .content_nav{
     height:40px;
@@ -114,6 +210,14 @@ body{
     margin-bottom: 10px;
     overflow: hidden;
 }
+ .mySwiper{
+            height:360px;
+            width:360x;
+ }
+.swiper-wrapper img{
+            height:360;
+            width:360px;
+ }
 .smallimg{
     height:50px;
     width:360px;
@@ -215,10 +319,154 @@ body{
 .massage .foot>img{
     float:right;
 }
+.detail{
+	min-height:2000px;
+	margin-top:26px;
+	position:relative;
+}
 .store{
     height:808px;
-    width:202px;
+    width:212px;
+    position:absolute;
+    float: left;
+}
+.store .store_tit{
+	height:185px;
+	border:1px solid #CCCCCC;
+	background: white;
+}
+.store_tit>h3{
+	font-weight: 400;
+	font-size:14px;
+	padding:0px 15px;
+	height:50px;
+	line-height:50px;
+	border-buttom:1px solid gray;
+	background:#f5f5f5;
+}
+.store_tit .con{
+	height:132px;
+	width:182px;
+	padding:6px 15px 10px;
+	overflow: hidden;
+}
+.con>h4{
+	padding:10px 16px;
+	font-size:16px;
+	font-weight: 400;
+}
+.con table{
+	width:170px;
+	text-align: center;
+	font-size:14px;
+	height:72px;
+	border-spacing: 0;
+}
+.con th{
+	font-weight: 400;
+	color:#4C4C4C;
+}
+.con>table td{
+	color:red;
+	font-weight: 400;
+}
+.undertaking{
+	height:75px;
+	margin-top:10px;
+	border:1px solid #ccc;
+	width:210px;
+	background: white;
+}
+.undertaking>span{
+	display: block;
+	width:180px;
+	height:51px;
+	border-buttom:1px solid gray;
+	background:#f5f5f5;
+	padding:0px 15px;
+	line-height:51px;
+}
+.store .like{
+    height:530px;
+    margin:10px 0px;
+}
+.store .like>span{
+	height:50px;
+	padding:0px 15px;
+	line-height:50px;
+	border:1px solid #ccc;
+	display: block;
+	background:white;
+}
+.store .advice_img{
+	height:444px;
+	background: white;
+	margin-top:10px;
+             overflow: hidden;
+}
+.offer{
+             height:210px;
+             width:210px;
+             position:relative;
+}
+.offer:hover  .offer_price{
+        display: block;
+}
+.offer_price{
+            position:absolute;
+            bottom:0px;
+            height:50px;
+            background: black;
+            opacity: 0.6;
+            line-height: 25px;
+            display: none;
+}
+.offer_price>p{
+    font-size: 12px;
+    color:white;
+    width:210px;
+    text-align: center;
     
+}
+.advice_img img{
+    height:210px;
+    width:210px;
+}
+.ware{
+	min-height:2000px;
+	width:714px;
+	float: right;
+	background:white;
+	border:1px solid #ccc;
+}
+.ware_head{
+	height:50px;
+	margin-bottom: 20px;
+	border-bottom:1px solid #ccc;
+}
+.ware_head  span{
+	min-width:116px;
+	display: inline-block;
+	height:50px;
+	line-height:50px;
+	text-align: center;
+}
+.ware_head>.span1{
+	color:white;
+	font-weight: bold;
+	background: #51b2d6;
+}
+.span2>i{
+	color:red;
+	text-decoration: none;
+}
+.ware_main{
+	width:690px;
+	min-height:500px;
+	margin-left: 10px;
+}
+.ware_main>img{
+	width:690px;
 }
 .footer{
     height:390px;

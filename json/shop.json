@@ -1,0 +1,6 @@
+[
+{"id": 1, "name": "优质羊毛衫", "price": 98,"img":"../images/page1.jpg"},
+{"id": 2, "name": "美白补水面膜", "price": 78,"img":"../images/page2.jpg"},
+{"id": 3, "name": "真皮运动鞋", "price": 58,"img":"../images/page3.jpg"},
+{"id": 4, "name": "青蛙王子润肤霜", "price":28,"img":"../images/page4.jpg"}
+]

@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>详情</title>
     <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/css/swiper.css">
 </head>
 <body>
+
         <div class="header">
                 <div class="header_top">
                     <ul class="li_left">
@@ -41,6 +43,25 @@
             </div>
             <div class="content">
                 <div class="main">
+                     <div class="shop_main">
+                           <div class="weight">
+                               <span>净含量</span>
+                               <span class = "val" style="border: 1px solid orangered;text-align: center;">20片</span>
+                           </div>
+                           <div class="quantity">
+                               <span>数量</span>
+                               <div class="num"><button class="lesser">-</button><input class="val_num" type="text" value ="1"><button class="adder">+</button></div>
+                               <div  class="leavings">（库存2323件）</div>
+                           </div>
+                           <div class="verify">
+                               <button type="submit" class="sure">确定</button>
+                               <button class="cancel">取消</button>
+                           </div>
+                           <div class="shop_img">
+                           	   <span class="no"> X </span>
+                               <img src="../images/page7.jpg" >
+                           </div>
+                     </div>
                     <div class="content_nav">
                         <a href="">今日团购 > </a>
                         <a href=""> 商品团 > </a>
@@ -50,11 +71,15 @@
                     <div class="banner">
                         <div class="images">
                             <div class="bigimg">
-                                    <img src="../images/images/1.jpg" id="photo1" style="height:360px; width:360px">
-                                    <img src="../images/images/2.jpg" id="photo2" style="height:360px; width:360px">
-                                    <img src="../images/images/3.jpg" id="photo3" style="height:360px; width:360px">
-                                    <img src="../images/images/4.jpg" id="photo4" style="height:360px; width:360px">
-                                    <img src="../images/images/5.jpg" id="photo5" style="height:360px; width:360px">
+                                   <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                             <div class="swiper-slide"> <img src="../images/images/1.jpg" id="photo1" ></div>
+                                             <div class="swiper-slide"><img src="../images/images/2.jpg" id="photo2" ></div>
+                                             <div class="swiper-slide"> <img src="../images/images/3.jpg" id="photo3"></div>
+                                             <div class="swiper-slide"> <img src="../images/images/4.jpg" id="photo4"></div>
+                                             <div class="swiper-slide"> <img src="../images/images/5.jpg" id="photo5" ></div>
+                                        </div>
+                                    </div>
                             </div>
                             <ul class="smallimg">
                                     <li><a href="#photo1"><img src="../images/images/1.jpg" alt=""></a></li>
@@ -87,7 +112,7 @@
                                 <img src="../images/images/red_03.png" alt="">
                             </div>
                             <div class="foot">
-                                <span><a href=""><img src="../images/images/detail1.png">加入购物车</a></span>
+                                <span><a  class="add_car"><img src="../images/images/detail1.png">加入购物车</a></span>
                                 <span><a href=""><img src="../images/images/detail2.png">加入聚收藏</a></span>
                                 <span><a href=""><img src="../images/images/detail3.png">分享</a></span>
                                 <img src="../images/images/detail4.png" >
@@ -97,8 +122,65 @@
                 </div>
             </div>
             <div class="detail">
-            	<div class="store"></div>
-				<div class="ware"></div>
+            	<div class="store">
+            		<div class="store_tit">
+            			<h3>三只松鼠旗舰店</h3>
+            		  <div class="con">
+            			<h4>店铺动态评分</h4>
+            			<table  cellspacing="0" cellpadding="0">
+            				<tr>
+            					<th>描述</th>
+            					<th>服务</th>
+            					<th>物流</th>
+            				</tr>
+            				<tr>
+            					<td>4.8 ↑</td>
+            					<td>4.8 ↑</td>
+            					<td>4.8 ↑</td>
+            				</tr>
+            			</table>
+            		  </div>
+            		</div>
+            		<div class="undertaking">
+            			<span>服务承诺</span>
+            		</div>
+            		<div class="like">
+            			<span>你可能还喜欢</span>
+            			<div class="advice_img">
+                                               <div class="offer">
+                                                   <img src="../images/images/3.jpg" >
+                                                   <div class="offer_price">
+                                                       <p>￥89.00</p>
+                                                       <p>祛斑保湿美白面膜</p>
+                                                   </div>
+                                               </div>
+                                              <div class="offer">
+                                                   <img src="../images/images/4.jpg" >
+                                                   <div class="offer_price">
+                                                       <p>￥89.00</p>
+                                                       <p>祛斑保湿美白面膜</p>
+                                                   </div>
+                                              </div>
+                                             
+                                        </div>
+            		</div>
+            	</div>
+				<div class="ware">
+					<div class="ware_head">
+						<span class="span1">宝贝详情</span>
+						<span class="span2">历史评价<i>214574</i></span>
+					</div>
+					<div class="ware_main">
+						<img src="../images/images/main (6).jpg"/>
+						<img src="../images/images/main (11).jpg"/>
+						<img src="../images/images/main (4).jpg"/>
+						<img src="../images/images/main (3).jpg"/>
+						<img src="../images/images/main (8).jpg"/>
+						<img src="../images/images/main (2).jpg"/>
+						<img src="../images/images/main(12).jpg"/>
+						<img src="../images/images/main (10).jpg"/>
+					</div>
+				</div>
             </div>
 <div class="footer">
 	<div class="footer_href">
@@ -270,6 +352,19 @@
 		<span> 2010-2016 JU.TAOBAO.COM 版权所有 互联网违法和不良信息举报中心：0517-81683775 blxx@list.alibaba-inc.com</span>
 	</div>
 </div>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.0/js/swiper.js"></script>
+    <script src="../js/detail.js"></script>
+    <script>
+             var bigimg  = document.querySelector('.bigimg');
+              var mySwiper = new Swiper('.swiper-container', {
+                  autoplay:true,
+                  loop:true,
+                  pagination: {
+                       el: '.swiper-pagination',
+                       clickable :true,
+                },
+              })
+            
+    </script>
 </body>
 </html>

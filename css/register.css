@@ -42,6 +42,29 @@ a:hover{
     font-size: 11px;
     line-height:36px;
 }
+.my,.keep,.shoper{
+    position: relative;
+}
+.my:hover,.keep:hover,.shoper:hover,.consu:hover{
+    background: white;
+}
+.my:hover .my_taobao,.keep:hover .my_keep,.shoper:hover  .shoper_center,.consu:hover .consu_service{
+    display: block;
+    width:70px;
+}
+
+.my_taobao,.my_keep,.shoper_center,.consu_service{
+    display: none;
+    position: absolute;
+    top:36px;
+    border:1px solid #f5f5f5;
+    border-top: 0px;
+    z-index: 5;
+    background: white;
+}
+.my_taobao>li>a,.my_keep>li>a,.shoper_center>li>a,.consu a{
+    font-size:11px;
+}
 .header_logo{
     height:82px;
     background:url(../images/enter/logo.png) no-repeat 0px 18px;
@@ -176,6 +199,14 @@ a:hover{
     position: absolute;
     border:1px solid #e8e8e8;
 }
+.green{
+    position: absolute;
+    background: #7ac23c;
+    width:0px;
+    height:32px;
+    top:0;
+    left:0;
+}
 .slice_span .small{
     height:32px;
     width:40px;
@@ -186,6 +217,9 @@ a:hover{
     position: absolute;
     top:0px;
     left:0px;
+}
+.small:hover,.success:hover{
+    cursor: move;
 }
 .slice .success{
     height:34px;

@@ -93,7 +93,7 @@ body{
     background: white;
      z-index: 100;
      padding: 20px;
-     border:7px solid #f5f5f5;
+     border:7px solid rgba(100,100,100,0.5);
      display: none;
      border-radius: 5px;
 }
@@ -162,13 +162,11 @@ body{
     top:20px;
     right:20px;
 }
-.shop_img>span{
+.shop_img .no{
 	position:absolute;
 	top: -10px;
     right:-10px;
-    width:21px;
-	text-align: center;
-	cursor:move;
+    height:21px;
 }
 .shop_img img{
     height:160px;

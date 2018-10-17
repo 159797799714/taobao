@@ -1,6 +1,418 @@
-/* 
-* @Author: anchen
-* @Date:   2018-10-12 08:47:30
-* @Last Modified by:   anchen
-* @Last Modified time: 2018-10-12 08:47:57
-*/
+body,html,div,ul,li,a,img,ol,em,h2,h3,h4,p,table,tr,td{
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+    text-decoration: none;
+    color:black;
+}
+body{
+    background:white;
+}
+.header{
+    height:35px;
+    background:#f5f5f5;
+}
+.header_top,.head,.type,.main,.pay,.item_li{
+    width:1190px;
+    margin:0 auto;
+}
+.header_top{
+    height:35px;
+}
+.header_top a{
+    font-size:11px;
+    color:#666666;
+}
+.header_top a:hover{
+    color:red;
+}
+.li_left{
+    float:left;
+}
+.li_left>li{
+    float:left;
+    padding-right:10px;
+}
+.li_right{
+    float:right;
+}
+.li_right>li{
+    float:left;
+    padding-right:10px;
+}
+.taobao{
+	position:relative;
+}
+.taobao:hover{
+    background: white;
+}
+.taobao:hover  .my_taobao{
+    display: block;
+    width:70px;
+}
+.my_taobao{
+    display: none;
+    position: absolute;
+    top:21px;
+    border:1px solid #f5f5f5;
+    border-top: 0px;
+    z-index: 5;
+    background: white;
+}
+.header_nav{
+    width:100%;
+    height:80px;
+}
+.nav{
+    height:80px;
+}
+.the_nav{
+    float:right;
+    padding-top:27px;
+}
+.the_nav>li{
+    float:left;
+    margin-right: 7px;
+}
+.nav .the_nav>li>a{
+    display:block;
+    padding:5px 10px;
+    font-size: 16px;
+}
+.nav .the_nav>li>a:hover{
+    background:#cccccc;
+}
+.head{
+	height:75px;
+	padding:20px;
+}
+.logo{
+	float: left;
+	height:45px;
+	width:180px;
+}
+.logo>span{
+	font-size: 18px;
+	line-height:45px;
+	height:45px;
+	display:block;
+	float: right;
+}
+.search{
+	float:right;
+	height:35px;
+	width:515px;
+	border:1px solid red;
+	box-sizing: border-box;
+	border:3px solid orangered;
+}
+.tianmao{
+	width:74px;
+	height:29px;
+	background:#f5f5f5;
+	position:relative;
+	float: left;
+	border-right:1px solid gray;
+	text-align: center;
+}
+.tianmao>span{
+	line-height:29px;
+	font-size:12px;
+	
+}
+.small_li{
+	position:absolute;
+	top:29px;
+	left: 0px;
+	display: none;
+}
+.search .car_search{
+	height:27px;
+	width:340px;
+	float:left;
+	border: 0px;
+}
+.search>span{
+    display:block;
+    height:29px;
+    width:93px;
+    background:orangered;
+    float: right;
+    text-align: center;
+    color:white;
+    font-size: 18px;
+}
+.type,.list li,.cart,span,.sum,.settle{
+	height:33px;
+}
+.type{
+	border-bottom: 2px solid #ccc;
+}
+.list{
+	float:left;
+}
+.list li{
+	float: left;
+	padding:0px ;
+}
+.list>li:hover{
+	border-bottom:2px solid orangered;
+}
+.first_li>a{
+	color:#f40;
+}
+.list a{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.1;
+	border-right:1px solid gray;
+	display: inline-block;
+	padding: 0px 35px;
+}
+.cart{
+	width:216px;
+	float: right;
+}
+.cart>span,.sum{
+	float: left;
+}
+.cart>span{
+	display: inline-block;
+	font-size: 12px;
+	width:120px;
+	line-height:33px;
+}
+.sum{
+	height:33px;
+	font-size: 12px;
+	font-weight: bold;
+	color:orangered;
+	width:36px;
+	text-align: center;
+	line-height: 33px;
+}
+.settle{
+	font-size: 12px;
+	color:white;
+	background:#ccc;
+	height:24px;
+	width:55px;
+	text-align: center;
+	margin-top:5px;
+	float: right;
+	border: 0px;
+}
+.main{
+	min-height:300px;
+}
+.main_clear{
+	width:1190px;
+	height:50px;
+	line-height: 50px;
+	float: left;
+	font-size:12px;
+}
+.sel_all{
+	height:50px;
+	float:left;
+	width:80px;
+}
+.sel_all>i{
+	display: inline-block;
+	height:20px;
+	width:20px;
+	color:orangered;
+	border:1px solid #ccc;
+	vertical-align: middle;
+	margin-right:15px;
+	margin-left:10px;
+}
+ .main_clear>span{
+	display:block;
+	width:136px;
+	height:50px;
+	float: left;
+	padding-left:90px;
+}
+
+.main_clear>ul{
+	float: right;
+	margin-right: 50px;
+	width:532px;
+	height:50px;
+}
+.main_clear li{
+	width:130px;
+	margin-right:3px;
+	float: left;
+}
+.main .store{
+	width:1190px;
+	height:28px;
+	padding-top:10px;
+	line-height:28px;
+	float: left;
+}
+.empty{
+   text-align: center;
+   font-size: 30px;
+   font-family: monospace;
+   color:orangered;
+   height:500px;
+   width:1190px;
+   display:none;
+}
+.empty>a{
+	color:blue;
+}
+.item_li{
+	min-height:500px;
+	_height:500px;
+}
+.item_clear{
+	width:1188px;
+	height:115px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	float: left;
+	padding-top:20px;
+	background: #f5f5f5;
+	margin-bottom:10px;
+}
+.item_clear li{
+	float:left;
+	height:80px;
+	margin-right:5px;
+}
+.select{
+	width:50px;
+}
+.select>i{
+	display: inline-block;
+	height:20px;
+	width:20px;
+	color:orangered;
+	font-weight: 700;
+	border:1px solid #ccc;
+	margin-left: 10px;
+	margin-top:30px;
+}
+.item_img{
+	width:80px;
+	height:80px;
+}
+.item_img>img{
+	height:80px;
+	width:80px;
+}
+.item_name{
+	width:226px;
+	height:40px;
+	overflow: hidden;
+	font-size: 12px;
+}
+.item_weight{
+	width:212px;
+}
+.item_price{
+	width:110px;
+	padding-left:20px;
+	font-weight: 700;
+}
+.item_num{
+	width:120px;
+}
+.item_num .num{
+	height:25px;
+	width:80px;
+	line-height:25px;
+}
+.num>button{
+	float: left;
+	background:#ccc;
+	font-size: 20px;
+	width:20px;
+	height:25px;
+	border:0px;
+}
+.num .val_num{
+	height:23px;
+	width:38px;
+	float: left;
+	border:0px;
+	text-align:center;
+}
+.all_price{
+	width:125px;
+	color:red;
+	padding-left:15px;
+}
+.item_control{
+	width:149px;
+}
+.item_control>a{
+	height:27px;
+	display: block;
+	font-size: 12px;
+}
+.item_control>a:hover{
+	color:red;
+}
+.pay{
+	height:50px;
+	margin:0px auto;
+	background:#f5f5f5;
+	font-size:12px;
+}
+.pay>ul{
+	float: left;
+	height:50px;
+}
+.pay li{
+	float:left;
+	line-height: 50px;
+	margin-left: 25px;
+}
+.down_select>i{
+	display: inline-block;
+	height:20px;
+	width:20px;
+	border:1px solid black;
+	vertical-align: middle;
+	margin-right:15px;
+	margin-left: 10px;
+	background:white;
+	color:orangered;
+	font-weight: 700;
+}
+.total{
+	height:50px;
+	width:430px;
+	float:right;
+	line-height:50px;
+}
+.total span{
+	color:red;
+	font-size:18px;
+	font-weight: 700;
+}
+.total .sel_sum{
+	float:left;
+	width:100px;
+	height:50px;
+	margin-left:20px;
+}
+.total .price_sum{
+	height:50px;
+	min-width:160px;
+	float: left;
+	margin-left: 30px;
+}
+.total .sum_pay{
+	width:120px;
+	height:50px;
+	background:#ccc;
+	color:white;
+	float:right;
+	border:0px;
+}

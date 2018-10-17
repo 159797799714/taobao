@@ -1,15 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>我的购物车</title>
-        <link rel="stylesheet" href="../css/shop_car.css">
-    </head>
-    <body>
 
+<head>
+	<meta charset="utf-8">
+	<title>我的购物车</title>
+	<link rel="stylesheet" href="../css/shop_car.css">
+</head>
 
+<body>
+	<div class="header"></div>
+	<div class="head">
+		<div class="logo">
+			<img src="../images/enter/logo.png">
+			<span>购物车</span>
+		</div>
+		<div class="search">
+			<div class="tianmao">
+				<span><a href=""> 天猫&nbsp;v</a>
+					<div class="small_li">
+						<a href="">宝贝</a>
+						<a href="">店铺</a>
+					</div>
+				</span>
+			</div>
+			<input type="text" class="car_search" />
+			<span class="to_search">搜索</span>
+		</div>
+	</div>
+	<div class="type">
+		<ul class="list">
+			<li class="first_li"><a href="">全部商品</a></li>
+			<li><a href="">降价商品</a></li>
+			<li><a href="">库存紧张</a></li>
+		</ul>
+		<div class="cart">
+			<span>已选商品（不含运费）</span>
+			<div class="sum">0.00</div>
+			<button class="settle">结算</button>
+		</div>
+	</div>
+	<div class="main">
+		<div class="main_clear">
+			<div class="sel_all"><i></i>全选</div>
+			<span>商品信息</span>
+			<ul>
+				<li>单价</li>
+				<li>数量</li>
+				<li>金额</li>
+				<li>操作</li>
+			</ul>
+		</div>
+		<div class="store"></div>
+		<div class="item_li">
+			<div class="empty">空空如也！<a href="index.html">点击去首页看看</a></div>
+			<!-- <ul class="item_clear">
+				<li class="select"><i></i></li>
+				<li class="item_img"></li>
+				<li class="item_name"></li>
+				<li class="item_weight"></li>
+				<li class="item_price"></li>
+				<li class="item_num">
+					<div class="num">
+						<button class="lesser">-</button>
+						<input class="val_num" type="text" value="1">
+						<button class="adder">+</button>
+					</div>
+				</li>
+				<li class="all_price"></li>
+				<li class="item_control">
+					<a class="keep">加入收藏夹</a>
+					<a class="kill">删除</a>
+				</li>
+			</ul> -->
+		</div>
+	</div>
+	<div class="pay">
+		<ul>
+			<li class="down_select" style="margin:0px">
+				<i></i>全选
+			</li>
+			<li>删除</li>
+			<li>移入收藏夹</li>
+			<li><a href="">分享</a></li>
+		</ul>
+		<div class="total">
+			<div class="sel_sum">已选商品<span>0</span>件</div>
+			<div class="price_sum">合计(不含运费)：<span class="harmony">0.00</span></div>
+			<button class="sum_pay">结算</button>
+		</div>
+	</div>
+	<script src="../js/jquery/dist/jquery.js"></script>
+	<script src="../js/shop.js"></script>
+	<script>
+		$(".header").load("index.html .header");
+	</script>
+</body>
 
-    
-    <script></script>
-    </body>
 </html>

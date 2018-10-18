@@ -28,7 +28,7 @@ var add_char = (function () {
 	var pri = Number(p);
 	window.onscroll = function(){
 		var t = document.documentElement.scrollTop;
-		console.log(t)
+		// console.log(t)
 		if(t>=650){
 			store.style.position = 'fixed';
 			store.style.top = '0px';
@@ -73,10 +73,10 @@ var add_char = (function () {
 			}
 			id++;
 			data = JSON.stringify(data);
-			arr.push(data);
+               arr.push(data);
 			localStorage.arr = arr;
 			shop_main.style.display = 'none';
-			console.log(arr);
+			console.log(localStorage.arr);
 		}
 	}
 

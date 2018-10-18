@@ -1,18 +1,19 @@
 
 var item_li = document.querySelector('.item_li');
+var sum_pay = document.querySelector('.sum_pay');
+var settle = document.querySelector('.settle');
 var getLocalStorage = (function () {
-    var arr2 = [] ;
+    var arr2 = [];
     if (localStorage.length != 0) {
         var a = (localStorage.arr).split(',{');
-        // console.log(a)
         for (var i = 0; i < a.length; i++) {
             if (i >= 1) {
                 a[i] = '{' + a[i];
             }
-            else{
+            else {
                 a[i] = a[i];
             }
-             b = JSON.parse(a[i]);
+            b = JSON.parse(a[i]);
             arr2.push(b);
             var img_innerHTML = '<img src="' + arr2[i].src + '">';
             var name_innerHTML = arr2[i].name;
@@ -40,47 +41,64 @@ var getLocalStorage = (function () {
         </li>`;
             newUl.innerHTML = str;
             item_li.appendChild(newUl);
-            var num = document.querySelector('.val_num');
-            num.value = arr2[i].num;
         }
         var main = document.querySelector('.item_li');
         main.onclick = function (ev) {
             ev = ev || window.event;
             // ev.target谁触发这个事件，就是谁
             var target = ev.target;
-            console.log(target);
+            console.log(target)
             //点击删除
             if (target.getAttribute('class') == 'kill') {
                 target.parentElement.parentElement.remove();
-                var _index = (target.parentElement.parentElement.getAttribute('class').slice(-1));
+                _index = (target.parentElement.parentElement.getAttribute('class').slice(-1));
                 _index = Number(_index);
-                arr2.splice(_index, 1);
-                // localStorage.clear();
+                arr2.splice(_index - 1, 1);
+                localStorage.arr = JSON.stringify(arr2);
+                if (localStorage.arr == '[]') {
+                    localStorage.clear();
+                }
             }
             //数量的加减
-            var shuliang;
-            if(target.getAttribute('class') == 'adder'){
-                target.previousElementSibling.value ++;
-                shuliang = target.previousElementSibling.value;
-            }
-            if(target.getAttribute('class') == 'lesser'){
-                target.nextElementSibling.value --;
-                if(target.nextElementSibling.value < 1){
-                    target.nextElementSibling.value = 1;
+
+            
+            if (target.getAttribute('class') == 'adder' || target.getAttribute('class') == 'lesser') {
+                var shuliang;
+                var danjia;
+                if (target.getAttribute('class') == 'adder') {
+                    danjia = target.parentElement.parentElement.previousElementSibling.innerHTML
+                    target.previousElementSibling.value++;
+                    shuliang = Number(target.previousElementSibling.value);
                 }
-                shuliang = target.nextElementSibling.value;
+                if (target.getAttribute('class') == 'lesser') {
+                    danjia = target.parentElement.parentElement.previousElementSibling.innerHTML
+                    target.nextElementSibling.value--;
+                    if (target.nextElementSibling.value < 1) {
+                        target.nextElementSibling.value = 1;
+                    }
+                    shuliang = Number(target.nextElementSibling.value);
+                }
+                danjia = Number(danjia.slice(1));
+                target.parentElement.parentElement.nextElementSibling.innerHTML = '￥' + danjia * shuliang;
             }
 
             //可选框
-            if(target.nodeName =='I'){
-                if(target.innerHTML != '✓' ){
+            if (target.nodeName == 'I') {
+                if (target.innerHTML != '✓') {
                     target.innerHTML = '✓';
+                    sum_pay.style.background = 'orangered';
+                    settle.style.background = 'orangered';
                 }
-                else{
+                else {
                     target.innerHTML = null;
+                    sum_pay.style.background = '#ccc';
+                    settle.style.background = '#ccc';
                 }
             }
         }
+    }
+    else {
+        console.log('空空如也');
     }
 
     // arr = localStorage.arr.split(',');

@@ -320,7 +320,7 @@ body{
 .detail{
 	min-height:2000px;
 	margin-top:26px;
-	position:relative;
+	/* position:relative; */
 }
 .store{
     height:808px;
@@ -435,12 +435,14 @@ body{
 	width:714px;
 	float: right;
 	background:white;
-	border:1px solid #ccc;
+    position: relative;
 }
 .ware_head{
 	height:50px;
 	margin-bottom: 20px;
-	border-bottom:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    background:white;
+    width:714px;
 }
 .ware_head  span{
 	min-width:116px;
@@ -461,7 +463,8 @@ body{
 .ware_main{
 	width:690px;
 	min-height:500px;
-	margin-left: 10px;
+    margin-left: 10px;
+    margin-top:20px;
 }
 .ware_main>img{
 	width:690px;

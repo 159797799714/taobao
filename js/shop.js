@@ -1,22 +1,27 @@
 
-var arr2 = [];
 var item_li = document.querySelector('.item_li');
 var getLocalStorage = (function () {
-    // console.log(localStorage.arr);
-    var a = (localStorage.arr).split(',{');
-    for (var i = 0; i < a.length; i++) {
-        if (i >= 1) {
-            a[i] = '{' + a[i];
-        }
-        b = JSON.parse(a[i]);
-        arr2.push(b);
-        var img_innerHTML = '<img src="' + arr2[i].src + '">';
-        var name_innerHTML = arr2[i].name;
-        var price_innerHTML = '￥' + arr2[i].price;
-        var all_innerHTML = '￥' + Number(arr2[i].num) * Number(arr2[i].price);
-        var newUl = document.createElement('ul');
-        newUl.setAttribute("class", 'item_clear' + ' ' + i);
-        var str = `<li class="select"><i></i></li>
+    var arr2 = [] ;
+    if (localStorage.length != 0) {
+        var a = (localStorage.arr).split(',{');
+        // console.log(a)
+        for (var i = 0; i < a.length; i++) {
+            if (i >= 1) {
+                a[i] = '{' + a[i];
+            }
+            else{
+                a[i] = a[i];
+            }
+             b = JSON.parse(a[i]);
+            arr2.push(b);
+            var img_innerHTML = '<img src="' + arr2[i].src + '">';
+            var name_innerHTML = arr2[i].name;
+            var price_innerHTML = '￥' + arr2[i].price;
+            var num_val = arr2[i].num;
+            var all_innerHTML = '￥' + Number(arr2[i].num) * Number(arr2[i].price);
+            var newUl = document.createElement('ul');
+            newUl.setAttribute("class", 'item_clear' + ' ' + 'li' + i);
+            var str = `<li class="select"><i></i></li>
         <li class="item_img">${img_innerHTML}</li>
         <li class="item_name">${name_innerHTML}</li>
         <li class="item_weight"></li>
@@ -24,7 +29,7 @@ var getLocalStorage = (function () {
         <li class="item_num">
             <div class="num">
                 <button class="lesser">-</button>
-                <input class="val_num" type="text" value="1">
+                <input class="val_num" type="text" value="${num_val}">
                 <button class="adder">+</button>
             </div>
         </li>
@@ -33,91 +38,50 @@ var getLocalStorage = (function () {
             <a class="keep">加入收藏夹</a>
             <a class="kill">删除</a>
         </li>`;
-        newUl.innerHTML = str;
-        item_li.appendChild(newUl);
-        var num = document.querySelector('.val_num');
-        num.value = arr2[i].num;
-        // console.log(arr2[i].num)
+            newUl.innerHTML = str;
+            item_li.appendChild(newUl);
+            var num = document.querySelector('.val_num');
+            num.value = arr2[i].num;
+        }
+        var main = document.querySelector('.item_li');
+        main.onclick = function (ev) {
+            ev = ev || window.event;
+            // ev.target谁触发这个事件，就是谁
+            var target = ev.target;
+            console.log(target);
+            //点击删除
+            if (target.getAttribute('class') == 'kill') {
+                target.parentElement.parentElement.remove();
+                var _index = (target.parentElement.parentElement.getAttribute('class').slice(-1));
+                _index = Number(_index);
+                arr2.splice(_index, 1);
+                // localStorage.clear();
+            }
+            //数量的加减
+            var shuliang;
+            if(target.getAttribute('class') == 'adder'){
+                target.previousElementSibling.value ++;
+                shuliang = target.previousElementSibling.value;
+            }
+            if(target.getAttribute('class') == 'lesser'){
+                target.nextElementSibling.value --;
+                if(target.nextElementSibling.value < 1){
+                    target.nextElementSibling.value = 1;
+                }
+                shuliang = target.nextElementSibling.value;
+            }
 
-        // var lesser = document.querySelector('.lesser');
-        // var adder = document.querySelector('.adder');
-        // var kill = document.querySelector('.kill');
-        // lesser.onclick = function () {
-        //     if (num.value > 1) {
-        //         num.value--;
-
-        //     }
-        //     else {
-        //         num.value = 1;
-        //     }
-        //     // all_price.innerHTML = '￥' + Number(num.value) * Number(arr2.price);
-        //     // //通过判断结算是否为橙色来判断是否选择商品
-        //     // if (sum_pay.style.background == 'orangered') {
-        //     //     harmony.innerHTML = all_price.innerHTML;
-        //     //     sum.innerHTML = all_price.innerHTML;
-        //     // }
-        // }
-        // //添加
-        // adder.onclick = function () {
-        //     num.value++;
-        //     // all_price.innerHTML = '￥' + Number(num.value) * Number(arr2.price);
-        //     // if (sum_pay.style.background == 'orangered') {
-        //     //     harmony.innerHTML = all_price.innerHTML;
-        //     //     sum.innerHTML = all_price.innerHTML;
-        //     // }
-        // }
-        // kill.onclick = function () {
-        //                 newUl.remove();
-        //                 localStorage.clear();
-        //                 console.log('删除了DOM元素');
-        //                 // sum_pay.style.background = '#ccc';
-        //                 // settle.style.background = '#ccc';
-        //                 // harmony.innerHTML = '0.00';
-        //                 // sum.innerHTML = '0.00';
-        //                 // sel_sum.firstElementChild.innerHTML = '0';
-        //             }
-
+            //可选框
+            if(target.nodeName =='I'){
+                if(target.innerHTML != '✓' ){
+                    target.innerHTML = '✓';
+                }
+                else{
+                    target.innerHTML = null;
+                }
+            }
+        }
     }
-    var lesser = document.querySelector('.lesser');
-        var adder = document.querySelector('.adder');
-        var kill = document.querySelector('.kill');
-        lesser.onclick = function () {
-            if (num.value > 1) {
-                num.value--;
-
-            }
-            else {
-                num.value = 1;
-            }
-            // all_price.innerHTML = '￥' + Number(num.value) * Number(arr2.price);
-            // //通过判断结算是否为橙色来判断是否选择商品
-            // if (sum_pay.style.background == 'orangered') {
-            //     harmony.innerHTML = all_price.innerHTML;
-            //     sum.innerHTML = all_price.innerHTML;
-            // }
-        }
-        //添加
-        adder.onclick = function () {
-            num.value++;
-            // all_price.innerHTML = '￥' + Number(num.value) * Number(arr2.price);
-            // if (sum_pay.style.background == 'orangered') {
-            //     harmony.innerHTML = all_price.innerHTML;
-            //     sum.innerHTML = all_price.innerHTML;
-            // }
-        }
-        kill.onclick = function () {
-                        newUl.remove();
-                        localStorage.clear();
-                        console.log('删除了DOM元素');
-                        // sum_pay.style.background = '#ccc';
-                        // settle.style.background = '#ccc';
-                        // harmony.innerHTML = '0.00';
-                        // sum.innerHTML = '0.00';
-                        // sel_sum.firstElementChild.innerHTML = '0';
-                    }
-
-
-
 
     // arr = localStorage.arr.split(',');
     // arr2 = arr;
